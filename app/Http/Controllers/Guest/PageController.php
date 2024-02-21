@@ -50,7 +50,9 @@ class PageController extends Controller
      */
     public function show($id)
     {
-        //
+        $project = Project::find($id);
+
+        return view('show', compact('project'));
     }
 
     /**

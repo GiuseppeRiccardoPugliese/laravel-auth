@@ -30,4 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+//Rotta per la show
+Route::get('/project/{id}', [PageController::class, 'show'])->name('project.show');
+
 require __DIR__ . '/auth.php';
