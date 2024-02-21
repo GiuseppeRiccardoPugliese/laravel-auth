@@ -2,28 +2,26 @@
 @import 'cardShow';
 
 body {
-    background-color: rgb(229, 222, 213);
+  background-color: rgb(229, 222, 213);
 }
 
-.reveal{
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 0.8s all ease;
-  }
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 0.8s all ease;
+}
 
-  .reveal.active{
-    transform: translateY(0);
-    opacity: 1;
-  }
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 .card {
-    cursor: pointer;
+  cursor: pointer;
 
-    &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
 }
-
-
