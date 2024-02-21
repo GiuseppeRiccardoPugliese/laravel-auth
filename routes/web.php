@@ -17,8 +17,12 @@ use App\Http\Controllers\Guest\PageController;
 |
 */
 
-//Rotta per l'index del controller
+//Rotta per l'INDEX del controller
 Route::get('/', [PageController::class, 'index'])->name('project.index');
+
+//Rotta per la DELETE
+Route::delete('/project/{id}', [PageController::class, 'destroy'])->name('project.destroy');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

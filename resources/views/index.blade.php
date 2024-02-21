@@ -10,13 +10,17 @@
                     <div class="card" style="width: 18rem; min-height: 250px;">
                         <img class="card-img-top" src="{{ $project->image }}" alt="Card image cap">
                         <div class="card-body">
-                            <a href="{{ route('project.show', $project->id) }}">
+                            <a class="text-decoration-none" href="{{ route('project.show', $project->id) }}">
                                 <h5 class="card-title text-center mb-2 border-bottom border-2 fw-semibold">
                                     {{ $project->title }}
                             </a>
                             </h5>
                             {{-- <p class="card-text">{{ $project->description }}</p> --}}
-                            <a href="#" class="btn btn-primary"></a>
+                            <form method="POST" action="{{ route('project.destroy', $project->id) }}">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" class="mx-2 btn btn-danger" value="DELETE">
+                            </form>
                         </div>
                     </div>
 

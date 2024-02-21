@@ -86,6 +86,9 @@ class PageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $project = Project::find($id);
+        $project->delete();
+
+        return redirect()->route('project.index');
     }
 }

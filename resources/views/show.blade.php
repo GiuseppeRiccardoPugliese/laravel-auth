@@ -8,11 +8,10 @@
                 <div class="card" style="width: 18rem; min-height: 250px;">
                     <img class="card-img-top" src="{{ $project->image }}" alt="Card image cap">
                     <div class="card-body">
-                        <a href="">
-                            <h5 class="card-title text-center mb-2 border-bottom border-2 fw-semibold">
-                                {{ $project->title }}
-                        </a>
-                        </h5>
+
+                        <h5 class="card-title text-center mb-2 border-bottom border-2 fw-semibold">
+                            {{ $project->title }}</h5>
+
                         <p class="card-text">{{ $project->description }}</p>
                     </div>
                 </div>
