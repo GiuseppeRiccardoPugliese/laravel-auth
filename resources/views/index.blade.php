@@ -27,7 +27,7 @@
                             </a>
                             </h5>
                             {{-- <p class="card-text">{{ $project->description }}</p> --}}
-                            <div class="d-flex">
+                            <div class="d-flex justify-content-evenly">
                                 <form method="POST" action="{{ route('project.destroy', $project->id) }}">
                                     {{-- (action)Rotta per la DESTROY --}}
                                     @csrf
