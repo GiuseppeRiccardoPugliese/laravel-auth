@@ -28,7 +28,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
@@ -39,7 +39,18 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $newProject = new Project();
+
+        $newProject->title = $data['title'];
+        $newProject->description = $data['description'];
+        // $newProject->image = $data['image'];
+
+        //Salviamo i dati
+        $newProject->save();
+
+        //Facciamo il redirect della SHOW
+        return redirect()->route('project.show', $newProject->id);
     }
 
     /**

@@ -20,9 +20,17 @@ use App\Http\Controllers\Guest\PageController;
 //Rotta per l'INDEX del controller
 Route::get('/', [PageController::class, 'index'])->name('project.index');
 
+//Rotta per la CREATE (in GET)
+Route::get('/project/create', [PageController::class, 'create'])->name('project.create');
+
+//Rotta per la CREATE (in POST)
+Route::post('/project', [PageController::class, 'store'])->name('project.store');
+
 //Rotta per la DELETE
 Route::delete('/project/{id}', [PageController::class, 'destroy'])->name('project.destroy');
 
+//Rotta per la show
+Route::get('/project/{id}', [PageController::class, 'show'])->name('project.show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -33,8 +41,5 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-//Rotta per la show
-Route::get('/project/{id}', [PageController::class, 'show'])->name('project.show');
 
 require __DIR__ . '/auth.php';
