@@ -57,4 +57,6 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+
+    <h1 class="text-center mt-5">Per vedere i nostri progetti, iscriviti al nostro sito</h1>
 @endsection
