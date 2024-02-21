@@ -74,7 +74,9 @@ class PageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $project = Project::find($id);
+
+        return view('edit', compact('project'));
     }
 
     /**
@@ -86,7 +88,19 @@ class PageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $project = Project::find($id);
+
+        $data = $request->all();
+
+        $project->title = $data['title'];
+        $project->description = $data['description'];
+        // $Project->image = $data['image'];
+
+        //Salviamo i dati
+        $project->save();
+
+        //Facciamo il redirect della SHOW
+        return redirect()->route('project.show', $project->id);
     }
 
     /**

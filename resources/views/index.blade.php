@@ -3,11 +3,15 @@
     <div class="d-flex justify-content-center align-items-center">
         <h1 class="text-danger fw-bolder">Projects: {{ count($projects) }}</h1>
 
+        {{-- @auth --}}
+
         {{-- Rotta per la CREATE --}}
         <a href="{{ route('project.create') }}"> <button type="button" class="btn btn-success ms-2">CREATE</button> </a>
+        {{-- @endauth --}}
     </div>
 
     <div class="container">
+        {{-- @auth --}}
         <div class="row">
 
             @foreach ($projects as $project)
@@ -29,6 +33,8 @@
                                 @method('DELETE')
                                 <input type="submit" class="mx-2 btn btn-danger" value="DELETE">
                             </form>
+                            <a class="text-decoration-none" href="{{ route('project.edit', $project->id) }}"><button
+                                    type="button" class="btn btn-info ms-2">EDIT</button></a>
                         </div>
                     </div>
 
@@ -36,5 +42,6 @@
             @endforeach
 
         </div>
+        {{-- @endauth --}}
     </div>
 @endsection

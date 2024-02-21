@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <h1 class="text-danger text-center fw-bolder">Project: [{{ $project->id }}]</h1>
+    <h1 class="text-danger text-center fw-bolder">Project ID: [{{ $project->id }}]</h1>
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-4 my-3 d-flex justify-content-center align-items-center">

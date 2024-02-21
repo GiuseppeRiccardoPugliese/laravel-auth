@@ -26,10 +26,16 @@ Route::get('/project/create', [PageController::class, 'create'])->name('project.
 //Rotta per la CREATE (in POST)
 Route::post('/project', [PageController::class, 'store'])->name('project.store');
 
+//Rotta per l'EDIT
+Route::get('/project/{id}/edit', [PageController::class, 'edit'])->name('project.edit');
+
+//Rotta per l'UPDATE
+Route::put('/project/{id}', [PageController::class, 'update'])->name('project.update');
+
 //Rotta per la DELETE
 Route::delete('/project/{id}', [PageController::class, 'destroy'])->name('project.destroy');
 
-//Rotta per la show
+//Rotta per la SHOW
 Route::get('/project/{id}', [PageController::class, 'show'])->name('project.show');
 
 Route::get('/dashboard', function () {
@@ -37,9 +43,13 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+
+    //Profile route con l'autorizzazione
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    //Our Routes
 });
 
 require __DIR__ . '/auth.php';
