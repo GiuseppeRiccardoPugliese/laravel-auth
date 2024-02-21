@@ -18,7 +18,7 @@
                 <img src="{{ asset('mimmo.jpg') }}" class="d-block w-100 h-100 object-fit-cover rounded-4" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Domenico Lella</h5>
-                    <p>Mimmucc pe frat fidat</p>
+                    <p>per me TA e' gia' nord africa</p>
                 </div>
             </div>
             <div class="carousel-item h-100">
@@ -44,7 +44,7 @@
                 <img src="{{ asset('andrew.jpg') }}" class="d-block w-100 h-100 object-fit-cover rounded-4" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Andrea Manigrasso</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
+                    <p>Ciao, sono Andrea, il "Pizzicarello" del web! Tra una riga di codice e un piatto di orecchiette, trasformo il tuo progetto in una festa digitale. Porto il calore pugliese anche al codice binario. Che il tuo sito sia un successo come una tarantella in piazza</p>
                 </div>
             </div>
         </div>
