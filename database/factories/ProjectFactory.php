@@ -17,9 +17,11 @@ class ProjectFactory extends Factory
     public function definition()
     {
         return [
-            'title' => fake()->sentence(),
+            'title' => fake()->unique()->sentence(4, false),
             'description' => fake()->paragraph(3, false),
-            'image' => fake()->imageUrl(360, 360, 'animals', true, 'cats'),
+
+            //Non ci va l'img perche' abbiamo passato un link assoluto nella migration
+            // 'image' => fake()->imageUrl(360, 360, 'animals', true, 'cats'),
         ];
     }
 }

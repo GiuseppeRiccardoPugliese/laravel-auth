@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table->string('title')->unique();
             $table->text('description');
-            $table->string('image')->default('');
+            $table->string('image')->default('https://www.totel.it/images/og/portfolio.jpg');
 
             $table->timestamps();
         });
