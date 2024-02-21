@@ -2,6 +2,18 @@
 @section('content')
     <h1 class="text-danger text-center fw-bolder">New Project</h1>
 
+
+    {{-- Validation Request --}}
+    @if ($errors->any())
+        <div class="alert alert-dark">
+            <ul class="m-0">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <form class="text-center my-3" action="{{ route('project.store') }}" method="POST">
 
         @csrf

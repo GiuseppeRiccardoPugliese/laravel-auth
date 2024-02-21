@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateProjectRequest;
 use Illuminate\Http\Request;
 
 //Importiamo il model
@@ -37,7 +38,7 @@ class PageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateProjectRequest $request)
     {
         $data = $request->all();
         $newProject = new Project();
@@ -86,7 +87,7 @@ class PageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CreateProjectRequest $request, $id)
     {
         $project = Project::find($id);
 
