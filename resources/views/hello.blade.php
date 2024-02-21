@@ -18,7 +18,7 @@
                 <img src="{{ asset('mimmo.jpg') }}" class="d-block w-100 h-100 object-fit-cover rounded-4" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Domenico Lella</h5>
-                    <p>per me TA e' gia' nord africa</p>
+                    <p>Ecco Lella Domenico, il capo supremo del divertimento! Con un sorriso contagioso e un'incredibile abilità nel trasformare anche il più banale dei momenti in un'esperienza indimenticabile, Lella Domenico è come un raggio di sole in una giornata piovosa. Con lui/lei, l'umorismo è sempre garantito, così come una risata che fa tremare le fondamenta. In breve, se stai cercando qualcuno con cui condividere le risate più folli e gli scherzi più audaci, Lella Domenico è la scelta perfetta!</p>
                 </div>
             </div>
             <div class="carousel-item h-100">
