@@ -18,7 +18,7 @@
                 <img src="{{ asset('mimmo.jpg') }}" class="d-block w-100 h-100 object-fit-cover rounded-4" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Domenico Lella</h5>
-                    <p>Mimmucc pe frat fidat</p>
+                    <p>per me TA e' gia' nord africa</p>
                 </div>
             </div>
             <div class="carousel-item h-100">
