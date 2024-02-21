@@ -2,7 +2,7 @@
 @section('content')
     <h1 class="text-danger text-center fw-bolder">Our Team!!🤡</h1>
 
-    <div id="carouselExampleCaptions" class="carousel slide m-auto">
+    <div id="carouselExampleCaptions" class="carousel slide m-auto" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
