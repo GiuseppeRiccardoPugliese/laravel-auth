@@ -5,7 +5,7 @@
         <div class="row d-flex justify-content-center">
             <div class="col-4 my-3 d-flex justify-content-center align-items-center">
 
-                <div class="card" style="width: 18rem; min-height: 250px;">
+                <div class="card_show card" style="width: 18rem; min-height: 250px;">
                     <img class="card-img-top" src="{{ $project->image }}" alt="Card image cap">
                     <div class="card-body">
 

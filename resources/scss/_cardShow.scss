@@ -1,0 +1,12 @@
+@import '~bootstrap/scss/bootstrap';
+
+.card_show {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+}
+

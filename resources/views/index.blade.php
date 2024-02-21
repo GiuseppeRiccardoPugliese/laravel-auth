@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="d-flex justify-content-center align-items-center">
+    <div class="d-flex justify-content-center align-items-center my-5">
         <h1 class="text-danger fw-bolder">Our Projects: {{ count($projects) }}</h1>
 
         {{-- @auth --}}
@@ -17,7 +17,7 @@
             @foreach ($projects as $project)
                 <div class="col-4 mb-3 d-flex justify-content-center align-items-center">
 
-                    <div class="card" style="width: 18rem; min-height: 300px;">
+                    <div class="card reveal" style="width: 18rem; min-height: 300px;">
                         <img class="card-img-top" src="{{ $project->image }}" alt="Card image cap">
                         <div class="card-body">
                             {{-- Rotta per la SHOW --}}
@@ -47,3 +47,43 @@
         {{-- @endauth --}}
     </div>
 @endsection
+
+<script>
+
+    //NB. le varie classi sono all'inteno del app.scss
+    //creo la funzione reveal
+    function reveal() {
+
+        //prendo la classe .reveal
+        let reveals = document.querySelectorAll(".reveal");
+
+        // ottiene l'altezza della finestra del browser
+        let windowHeight = window.innerHeight;
+
+        //ciclo attraverso ogni elemento della lista
+        for (let i = 0; i < reveals.length; i++) {
+
+            //ottiene la distanza tra il bordo superiore dell'elemento e il bordo superiore della finestra di visualizzazione
+            let elementTop = reveals[i].getBoundingClientRect().top;
+
+            // definisce una soglia di visibilità (150 pixel dalla parte superiore della finestra)
+            let elementVisible = 150;
+
+            // controlla se l'elemento è visibile rispetto alla finestra di visualizzazione
+            if (elementTop < windowHeight - elementVisible) {
+
+                // aggiunge la classe "active" se l'elemento è visibile
+                reveals[i].classList.add("active");
+            } else {
+
+                // rimuove la classe "active" se l'elemento non è visibile
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+    // aggiunge un ascoltatore di eventi per lo scroll della finestra che chiama la funzione reveal
+    window.addEventListener("scroll", reveal);
+
+    // chiama la funzione reveal una volta quando la pagina viene caricata
+    reveal();
+</script>
